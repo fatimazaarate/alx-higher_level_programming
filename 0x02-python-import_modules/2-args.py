@@ -11,7 +11,7 @@ elif arg_number == 1:
     print("{} argument." .format(arg_number))
     print("{}: {}" .format(arg_number, sys.argv[1]))
 else:
-        print("{} arguments:" .format(arg_number))
-        while i <= arg_number:
-            print("{}: {}" .format(i, sys.argv[i]))
-            i = i+1
+    print("{} arguments:" .format(arg_number))
+    while i <= arg_number:
+        print("{}: {}" .format(i, sys.argv[i]))
+        i = i+1
