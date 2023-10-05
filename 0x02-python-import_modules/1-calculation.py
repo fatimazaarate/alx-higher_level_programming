@@ -1,14 +1,18 @@
 #!/usr/bin/python
-import calculator_1 as c
+if __name__ == "__main__":
+    from calculator_1 import add, div, sub, mul
 
-sum = c.add(10, 5)
-print("{} + {} = {}" .format(10, 5, sum))
+a = 10
+b = 5
 
-division = c.div(10, 5)
-print("{} + {} = {}" .format(10, 5, division))
+sum = add(a, b)
+print("{} + {} = {}" .format(a, b, sum))
 
-subs = c.sub(10, 5)
-print("{} + {} = {}" .format(10, 5, subs))
+division = div(a, b)
+print("{} + {} = {}" .format(a, b, division))
 
-multi = c.mul(10, 5)
-print("{} + {} = {}" .format(10, 5, multi))
+subs = sub(a, b)
+print("{} + {} = {}" .format(a, b, subs))
+
+multi = mul(a, b)
+print("{} + {} = {}" .format(a, b, multi))
