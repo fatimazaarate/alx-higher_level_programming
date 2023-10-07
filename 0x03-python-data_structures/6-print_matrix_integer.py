@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
-        for col in row:
-            if col != row[-1]:
-                print("{:d} ".format(col), end=' ')
+        for col in range(len(row)):
+            print("{:d}".format(row[col]), end="")
+            if col == len(row) - 1:
+                print(end="")
             else:
-                print("{:d}".format(col), end='')
+                print(" ", end="")
         print()
