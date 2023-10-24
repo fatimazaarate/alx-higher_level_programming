@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''define empty class'''
+'''define Square class'''
 
 
 class Square:
-    '''define empty class'''
+    '''define its size'''
 
     def __init__(self, size):
         self._square__size = size
