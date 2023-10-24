@@ -4,6 +4,7 @@
 
 class Square:
     '''define its size'''
+    __size = None
 
-    def __init__(self, size):
-        self._square__size = size
+    def __init__(self, new_size):
+        self.__size = new_size
