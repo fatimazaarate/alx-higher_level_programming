@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+'''
+Module for text_indentation method
+it prints a text with 2 new lines after each of these characters: ., ? and :
+returns nothing
+'''
+
+
 def text_indentation(text):
+    '''
+    Function prints a that text with 2 new lines.
+    '''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for i in range(len(text)):
