@@ -48,3 +48,6 @@ IndexError: list index out of range
 >>> matrix_divided(None, 1)
 Traceback (most recent call last):
 TypeError: object of type 'NoneType' has no len()
+
+>>> matrix_divided([[2, 4, 8], [1, 2, 3]], float('nan'))
+[[nan, nan, nan], [nan, nan, nan]]
