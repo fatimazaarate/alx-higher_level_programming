@@ -36,3 +36,15 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([[1, 0, 3], [4, 5, 6]], 3.5)
 [[0.29, 0.0, 0.86], [1.14, 1.43, 1.71]]
+
+>>> matrix_divided([[]], 10)
+Traceback (most recent call last):
+IndexError: list index out of range
+
+>>> matrix_divided([[2]], "foo")
+Traceback (most recent call last):
+IndexError: list index out of range
+
+>>> matrix_divided(None, 1)
+Traceback (most recent call last):
+TypeError: object of type 'NoneType' has no len()
