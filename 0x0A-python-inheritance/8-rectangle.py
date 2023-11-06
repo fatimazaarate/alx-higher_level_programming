@@ -19,7 +19,7 @@ class Rectangle(BaseGeometry):
         width and height must be positive integers
         '''
 
-        self.__width = width
+        self.__width__ = width
         self.integer_validator("width", width)
-        self.__height = height
+        self.__height__ = height
         self.integer_validator("height", height)
