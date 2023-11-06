@@ -2,7 +2,15 @@
 
 def lookup(obj):
     '''
-    A function that returns the list of available
-    attributes and methods of an object
+    Return a list of available attributes and methods of an object.
+
+    Parameters:
+    obj (object): The object to inspect.
+
+    Returns:
+    list: A list of attribute and method names.
     '''
-    return dir(obj)
+    if obj is not None:
+        return dir(obj)
+    else:
+        return []
