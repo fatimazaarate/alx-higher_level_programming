@@ -13,10 +13,6 @@ class MyList(list):
 
         Returns:
         None
-
-        Example Usage:
-        my_list = MyList([4, 2, 1, 3, 5])
-        my_list.print_sorted()  # Prints the sorted list: [1, 2, 3, 4, 5]
         """
 
     def print_sorted(self):
