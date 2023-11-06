@@ -6,7 +6,8 @@ a class MyList that inherits from list
 
 class MyList(list):
     """
-        Sorts the elements of the list instance in ascending order and prints the sorted result.
+        Sorts the elements of the list instance in ascending
+        order and prints the sorted result.
 
         Parameters:
         None
