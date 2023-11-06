@@ -4,6 +4,7 @@ Defines Square class Inheritor of Rectangle class
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     represent Square using Rectangle
