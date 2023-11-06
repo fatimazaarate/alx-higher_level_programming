@@ -15,13 +15,9 @@ class Rectangle(BaseGeometry):
     """
 
     def __init__(self, width, height):
-        """
-        __init__ method initializes the instances attributes.
-
-        Args:
-            width (int): the width of the rectangle.
-            height (int): the height of the rectangle.
-        """
+        '''
+        width and height must be positive integers
+        '''
 
         self.__width = width
         self.__height = height
