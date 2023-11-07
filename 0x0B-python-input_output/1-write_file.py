@@ -3,6 +3,7 @@
  a function that writes a string to a text file
 """
 
+
 def write_file(filename="", text=""):
     """
     Writes the specified text to a file with the given filename.
