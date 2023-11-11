@@ -25,4 +25,26 @@ class Base:
             else:
                 dictionary = [obj.to_dictionary() for obj in list_objs]
                 f.write(cls.to_json_string(dictionary))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or json_string == "[]":
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        with open(cls.__name__ + ".json", "r", encoding="utf-8") as f:
+            if not f:
+                return []
+            else:
+                list = cls.from_json_string(f.read())
+                return [cls.create(**dictionary) for dictionary in list]
     
