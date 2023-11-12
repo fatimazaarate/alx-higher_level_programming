@@ -47,4 +47,3 @@ class Base:
             else:
                 list = cls.from_json_string(f.read())
                 return [cls.create(**dictionary) for dictionary in list]
-    
