@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """a class Base that refer to the base class of other classes"""
 import json
+import csv
+import os
 
 
 class Base:
@@ -68,5 +70,36 @@ class Base:
                 for item in json_list:
                     return_list.append(cls.create(**item))
                 return return_list
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """CSV serialization of list of objects"""
+        with open(cls.__name__ + ".csv", "w", encoding="utf-8") as f:
+            if list_objs is None or len(list_objs) == 0:
+                f.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    attrs = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "square":
+                    attrs = ["id", "size", "x", "y"]
+                csv_file = csv.DictWriter(f, attrs=attrs)
+                for item in list_objs:
+                    csv_file.writerow(item.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from cxv file"""
+        try:
+            with open(cls.__name__ + ".csv", "r", encoding="utf-8") as f:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                ld = csv.DictReader(f, fieldnames=fieldnames)
+                ld = [{key: int(value) for key, value in dictionary.items()}
+                      for dictionary in ld]
+                return [cls.create(**dictionary) for dictionary in ld]
         except FileNotFoundError:
             return []
