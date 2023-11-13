@@ -127,7 +127,7 @@ class Rectangle(Base):
     def __str__(self):
         """the __str__ method so that it returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return f"[Rectangle]({self.id}) {self.x}/{self.y} \
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
