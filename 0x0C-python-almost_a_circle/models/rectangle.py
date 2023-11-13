@@ -115,14 +115,14 @@ class Rectangle(Base):
         """a public method that prints in stdout
         the Rectangle instance with the character #
         by taking care of x and y"""
-        rec = ['#' * self.width for _ in range(self.height)]
-
-        for y in range(self.y):
-            print(" " * self.y)
-
-        for item in rec:
-            print(" " * self.x, end='')
-            print(item)
+        for p in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for s in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """the __str__ method so that it returns
