@@ -5,6 +5,6 @@ create table if not exists second_table (
     score int
 );
 insert into second_table (1, "John", 10);
-insert into second_table (1, "Alex", 3);
-insert into second_table (1, "Bob", 14);
-insert into second_table (1, "George", 8);
+insert into second_table (2, "Alex", 3);
+insert into second_table (3, "Bob", 14);
+insert into second_table (4, "George", 8);
