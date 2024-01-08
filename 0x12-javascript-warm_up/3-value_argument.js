@@ -2,11 +2,10 @@
 
 let i = 2;
 
-if (process.argv.length < 3) {
+if (process.argv[2] === undefined) {
   console.log('No argument');
 } else {
-  while (i < process.argv.length) {
+  for (; process.argv[i] !== undefined; i++) {
     console.log(process.argv[i]);
-    i++;
   }
 }
