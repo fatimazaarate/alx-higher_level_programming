@@ -6,15 +6,14 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      this.width = 0;
-      this.height = 0;
+      Object.create(null);
     }
   }
 
   print () {
     for (let i = 0; i < this.height; i++) {
       let str = '' /* empty str */
-      for (let j = 0; j < this.weight; j++) {
+      for (let j = 0; j < this.width; j++) {
         str += 'X';
       }
       console.log(str);
