@@ -26,3 +26,5 @@ if __name__ == "__main__":
 
     # commit changes
     session.commit()
+
+    print(new_state.id)
