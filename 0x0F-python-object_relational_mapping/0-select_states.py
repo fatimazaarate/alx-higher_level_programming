@@ -20,7 +20,7 @@ def main():
     )
 
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states")
+    mycursor.execute("SELECT * FROM states ORDER BY id ASC")
     states = mycursor.fetchall()
 
     for state in states:
