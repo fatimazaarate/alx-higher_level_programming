@@ -23,4 +23,5 @@ if __name__ == "__main__":
     mycursor.execute(mySQLformulat, (sys.argv[4],))
     states = mycursor.fetchall()
 
-    print(states)
+    for state in states:
+        print(state)
