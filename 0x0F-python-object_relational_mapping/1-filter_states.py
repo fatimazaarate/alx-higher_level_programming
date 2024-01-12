@@ -19,7 +19,8 @@ if __name__ == "__main__":
     )
 
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    mySQLformulat = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+    mycursor.execute(mySQLformulat)
     states = mycursor.fetchall()
 
     for state in states:
