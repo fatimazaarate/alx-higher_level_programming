@@ -3,7 +3,14 @@
 import MySQLdb
 import sys
 
-if __name__ == "__main__":
+
+def main():
+    """
+    Connects to a MySQL database and retrieves and prints data
+    from the 'states' table.
+
+    Usage: python script.py <user> <password> <database>
+    """
     mydb = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -18,3 +25,7 @@ if __name__ == "__main__":
 
     for state in states:
         print(state)
+
+
+if __name__ == "__main__":
+    main()
