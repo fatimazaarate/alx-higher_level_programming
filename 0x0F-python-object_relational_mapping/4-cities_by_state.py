@@ -19,7 +19,12 @@ if __name__ == "__main__":
     )
 
     mycursor = mydb.cursor()
-    SQLquerry = "SELECT cities.id, cities.name FROM cities ORDER BY id ASC"
+    SQLquerry = "SELECT a.id, a.name, b.name\
+        FROM cities AS a \
+        JOIN states AS b \
+        ON a.state_id = b.id \
+        ORDER BY id ASC"
+
     mycursor.execute(SQLquerry)
     cities = mycursor.fetchall()
 
