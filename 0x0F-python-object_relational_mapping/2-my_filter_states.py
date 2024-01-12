@@ -17,7 +17,7 @@ if __name__ == "__main__":
         password=sys.argv[2],
         database=sys.argv[3]
     )
-    
+
     mycursor = mydb.cursor()
     mySQLformulat = "SELECT * \
         FROM states WHERE name = '{:s}' \
