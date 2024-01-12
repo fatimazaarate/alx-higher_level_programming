@@ -12,11 +12,10 @@ import sys
 if __name__ == "__main__":
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'
-        .format(sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]))
+        .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
-    # A session is like a workspace for making changes and interacting with the database.
+    # A session is like a workspace for making changes and
+    # interacting with the database.
     Session = sessionmaker(bind=engine)
     session = Session()
 
