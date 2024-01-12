@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-"""lists all states from database hbtn_0e_0_usa"""
+"""
+    Connects to a MySQL database and retrieves and prints data
+    from the 'states' table.
+
+    Usage: python script.py <user> <password> <database>
+"""
 import MySQLdb
 import sys
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
-                        host="localhost",
-                        port=3306,
-                        user=sys.argv[1],
-                        passwd=sys.argv[2],
-                        db=sys.argv[3]
-                        )
-    mycursor = db.cursor()
-    sql_query = "SELECT * FROM states ORDER by id ASC"
-    mycursor.execute(sql_query)
-    rows = mycursor.fetchall()
+    mydb = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        password=sys.argv[2],
+        database=sys.argv[3]
+    )
 
-    for row in rows:
-        print(row)
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM states ORDER BY id ASC")
+    states = mycursor.fetchall()
+
+    for state in states:
+        print(state)
