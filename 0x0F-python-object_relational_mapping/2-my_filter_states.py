@@ -17,11 +17,12 @@ if __name__ == "__main__":
         password=sys.argv[2],
         database=sys.argv[3]
     )
+    state_name = sys.argv[4]
 
     mycursor = mydb.cursor()
     mySQLformulat = "SELECT * \
         FROM states WHERE name = '{:s}' \
-        ORDER BY id ASC".format(sys.argv[4])
+        ORDER BY id ASC".format(state_name)
 
     mycursor.execute(mySQLformulat)
     states = mycursor.fetchall()
