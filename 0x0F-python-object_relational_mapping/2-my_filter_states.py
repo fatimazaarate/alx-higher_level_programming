@@ -20,8 +20,8 @@ if __name__ == "__main__":
 
     mycursor = mydb.cursor()
     mySQLformulat = "SELECT * \
-        FROM states WHERE name = '{}' \
-        ORDER BY id ASC".format(sys.argv[4])
+        FROM states WHERE name = 'Arizona' \
+        ORDER BY id ASC"
 
     mycursor.execute(mySQLformulat)
     states = mycursor.fetchall()
