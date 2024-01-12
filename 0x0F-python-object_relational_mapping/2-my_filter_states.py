@@ -19,8 +19,11 @@ if __name__ == "__main__":
     )
 
     mycursor = mydb.cursor()
-    mySQLformulat = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    mycursor.execute(mySQLformulat, (sys.argv[4],))
+    mySQLformulat = "SELECT * \
+        FROM states WHERE name = '{:s}' \
+        ORDER BY id ASC".format(sys.argv[4])
+
+    mycursor.execute(mySQLformulat)
     states = mycursor.fetchall()
 
     for state in states:
