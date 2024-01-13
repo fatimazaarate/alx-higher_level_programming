@@ -12,6 +12,7 @@ from model_state import Base
 # create a base fr declarative class definitions
 Base = declarative_base()
 
+
 # Define the City class, which inherits from the SQLAlchemy Base class
 class City(Base):
     """create class city for MySQL database
@@ -22,7 +23,7 @@ class City(Base):
         name (str) city's name."""
 
     # Set the table name for the City class
-    __tablename__ ="cities"
+    __tablename__ = "cities"
 
     # Define the columns for the cities table
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
