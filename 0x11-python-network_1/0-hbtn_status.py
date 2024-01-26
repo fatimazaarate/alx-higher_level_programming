@@ -6,9 +6,8 @@ a Python script that fetches https://alx-intranet.hbtn.io/status
 
 
 if __name__ == "__main__":
-    req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
-    with urllib.request.urlopen(req) as response:
-        page = response.read()
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as rs:
+        page = rs.read()
         print("Body response:")
         print(f"\t- type: {type(page)}")
         print(f"\t- content: {page}")
