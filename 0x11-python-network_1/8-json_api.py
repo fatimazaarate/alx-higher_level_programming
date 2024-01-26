@@ -10,7 +10,7 @@ import sys
 
 if __name__ == "__main__":
 
-    if (len.sys.argv != 2):
+    if (len(sys.argv) != 2):
         q = ""
     else:
         q = sys.argv[1]
@@ -20,6 +20,6 @@ if __name__ == "__main__":
         if js == {}:
             print("No result")
         else:
-            print(f"[{js.id}] {js.name}")
+            print(f"[{js.get.id}] {js.get.name}")
     except Exception:
         print("Not a valid JSON")
