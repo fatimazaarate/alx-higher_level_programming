@@ -14,7 +14,8 @@ if __name__ == "__main__":
         q = ""
     else:
         q = sys.argv[1]
-        req = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
+
+    req = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
     try:
         js = req.json()
         if js == {}:
