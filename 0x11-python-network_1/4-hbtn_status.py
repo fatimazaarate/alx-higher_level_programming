@@ -8,5 +8,5 @@ import requests
 
 r = requests.get('https://alx-intranet.hbtn.io/status')
 print("Body response:")
-print(f"\t type: {r.headers['content-type']}")
+print(f"\ttype: {type(r.headers['content-type'])}")
 print(f"\tcontent: {r.text}")
