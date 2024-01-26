@@ -20,6 +20,6 @@ if __name__ == "__main__":
         if js == {}:
             print("No result")
         else:
-            print(f"[{js.get.id}] {js.get.name}")
+            print(f"[{js.get('id')}] {js.get('name')}")
     except Exception:
         print("Not a valid JSON")
