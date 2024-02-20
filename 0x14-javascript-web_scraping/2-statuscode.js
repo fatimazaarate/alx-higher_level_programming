@@ -2,16 +2,11 @@
 
 const request = require('request');
 
-if (process.argv.length < 3) {
-  process.exit(1);
-}
-
 const url = process.argv[2];
 
-request.get(url, (error, response) => {
+request(url, (error, response) => {
   if (error) {
-    console.error(error.message);
-    process.exit(1);
+    console.error(error);
   }
   console.log('code: ', response.statusCode);
 });
