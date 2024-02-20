@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const https = require('https');
+const request = require('request');
 
 if (process.argv.length < 3) {
   process.exit(1);
@@ -8,8 +8,8 @@ if (process.argv.length < 3) {
 
 const url = process.argv[2];
 
-https.get(url, response => {
+request.get(url, (error, response) => {
   console.log('code: ', response.statusCode);
-}).on('error', (myError) => {
-  console.error(myError.message);
+}).on('error', (error) => {
+  console.error(error.message);
 });
