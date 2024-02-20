@@ -10,15 +10,17 @@ request.get(url, (error, response, body) => {
     console.error(error);
     return;
   }
-  const parsedData = JSON.parse(body);
+  const data = JSON.parse(body).results;
 
-  const film = parsedData.results.filter(film =>
-    film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-  );
-  if (film.length > 0) {
-    console.log(film.length);
+  let filmsNumber = 0;
+  for (const result of data) {
+    const filmschars = result.characters;
+
+    for (const film of filmschars) {
+      if (film.includes(characterId)) {
+        filmsNumber++;
+      }
+    }
   }
-  else {
-    console.error(error);
-  }
+  console.log(filmsNumber);
 });
