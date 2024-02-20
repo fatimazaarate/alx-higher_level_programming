@@ -10,6 +10,6 @@ request(url, (error, response, body) => {
     console.error(error);
   }
   const parse = JSON.parse(body);
-  const filmTitle = parse.title; 
+  const filmTitle = parse.title;
   console.log(filmTitle);
 });
