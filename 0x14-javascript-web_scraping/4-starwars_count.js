@@ -18,4 +18,7 @@ request.get(url, (error, response, body) => {
   if (film.length > 0) {
     console.log(film.length);
   }
+  else {
+    console.error(error);
+  }
 });
