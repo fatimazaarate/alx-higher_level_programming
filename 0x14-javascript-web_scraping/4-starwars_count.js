@@ -15,5 +15,7 @@ request.get(url, (error, response, body) => {
   const film = parsedData.results.filter(film =>
     film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
   );
-  console.log(film.length);
+  if (films.length > 0) {
+    console.log(film.length);
+  }
 });
